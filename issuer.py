@@ -46,7 +46,7 @@ class Issuer:
 		c = self.componet.get('host', host_id, 'c')
 
 		# 检验零知识证明
-		if((a * z.transpose()- c * u_1 != w)|(cc != hash((a[_sage_const_0 ][_sage_const_0 ],a[_sage_const_0 ][_sage_const_1 ])))) :
+		if (a * z.transpose() - c * u_1 != w)|(cc != hash((a[_sage_const_0][_sage_const_0], a[_sage_const_0][_sage_const_1]))):
 			print("零知识证明失败，join失败\n")
 			return
 		

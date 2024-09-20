@@ -156,7 +156,7 @@ class Host:
 				z1 = z1, z2 = z2, z3 = z3, z4 = z4, z5 = z5, z6 = z6, zp = zp, 
 				W1 = W1, W2 = W2, W3 = W3, W4 = W4, 
 				t1 = t1, t2 = t2, t3 = t3, t4 = t4, 
-				r = r, d = d, nym = nym, t = t, w = w, v = v, a = self.a, u = self.u)
+				r = r, d = d, nym = nym, t = t, w = w, v = v, a = self.a, u = self.u, bsn = bsn)
 
 
 

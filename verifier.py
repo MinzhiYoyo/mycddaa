@@ -65,10 +65,12 @@ class Verifier:
 		v = self.componet.get('host', host_id, 'v')
 		u = self.componet.get('host', host_id, 'u')
 		a = self.componet.get('host', host_id, 'a')
+		bsn = self.componet.get('host', host_id, 'bsn')
 
 		g = self.componet.get('issuer', self.domain.id, 'g')
 		H = self.componet.get('issuer', self.domain.id, 'H')
 		b = self.componet.get('issuer', self.domain.id, 'b')
+
 
 
 		f = c1 * t - B * zp
@@ -78,13 +80,13 @@ class Verifier:
 			(A1[_sage_const_3 ] * z4 +A2[_sage_const_0 ][_sage_const_3 ] * zp[_sage_const_3 ][_sage_const_0 ] != W4 + c1 * t4)  ):
 			return _sage_const_1 
 		
-		if self.domain.sigma_5(f) != z3 + r:
+		if self.domain.sigma_5(z3) != z3 + r:
 			return _sage_const_2 
 
-		if((d != hash(bsn)) | (d*z5 + z6 != c2 * nym + w)):
+		if (d != hash(bsn)) | (d * z5 + z6 != c2 * nym + w):
 			return _sage_const_3 
 		
-		if(g*z2*z3 + c1*(H*z1 + b*z2 - a*z4) - c1**_sage_const_2 *u != f+v):
+		if g*z2*z3 + c1*(H * z1 + b * z2 - a * z4) - c1**_sage_const_2 *u != f+v:
 			return _sage_const_4 
 		return _sage_const_0 
 
